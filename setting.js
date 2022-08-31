@@ -61,7 +61,6 @@ document.getElementById('btnSearch').addEventListener('click', function(){
     // phoneLoad(inputTextValue);
     processSearch(10);
 })
-
 document.getElementById('inputFlied').addEventListener('keypress', function(event){
     if(event.key === 'Enter'){
         processSearch(10);
@@ -91,9 +90,24 @@ const loadPhoneDetails = async id => {
 
 const modalDocument = (data) => {
     console.log(data)
-    const title = document.getElementById('title');
-    title.innerText = data.name;
+    const title = document.getElementById('brand');
+    title.innerText = data.brand;
+
+    const Display = document.getElementById('display');
+    Display.innerText = data.mainFeatures.displaySize
 
     const release = document.getElementById('release');
     release.innerText = data.releaseDate
+
+    const storage = document.getElementById('storage');
+    storage.innerText = data.mainFeatures.memory
+
+    const processor = document.getElementById('processor');
+    processor.innerText = data.mainFeatures.chipSet
+
+    const bluetooth = document.getElementById('bluetooth');
+    bluetooth.innerText = data.others.Bluetooth
+
+    const others = document.getElementById('others');
+    others.innerText = data.others.GPS, data.others.NFC, data.others.Radio, data.others.USB
 }

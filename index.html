@@ -14,6 +14,14 @@
         width: 100%;
         position: absolute;
         top: 40%;
+        }
+
+        h5.sameColor {
+    font-size: 20px;
+    color: #000000;
+    background: #03a9f4;
+    padding: 10px;
+    margin: 12px;
 }
     </style>
 </head>
@@ -23,9 +31,9 @@
         <div class="d-flex justify-content-center mt-3 w-75 mx-auto">
             <div>
                 <!-- Only Phone View -->
-                <input id="inputFlied2" type="text" class="form-control w-100 h-75 py-2 d-lg-none d-md-none" placeholder="Search Phone">
+                <!-- <input id="inputFlied2" type="text" class="form-control w-100 h-75 py-2 d-lg-none d-md-none" placeholder="Search Phone"> -->
                 <!-- Only Web View -->
-                <input id="inputFlied" type="text" class="form-control w-100 h-75 py-2 d-none d-lg-block d-md-block" placeholder="Search Phone">
+                <input id="inputFlied" type="text" class="form-control w-100 h-75 py-2 d-lg-block d-md-block" placeholder="Search Phone">
             </div>
             <div>
                 <button id="btnSearch" type="button" class="btn btn-primary mb-3 px-4 mx-3">Search</button>
@@ -50,9 +58,13 @@
             <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h5 id="title"></h5>
-                    <h5 id="release"></h5>
-                    <h5 id="title"></h5>
+                    <h5 class="sameColor">Brand : <span id="brand"></span></h5>
+                    <h5 class="sameColor">Display : <span id="display"></span></h5>
+                    <h5 class="sameColor">Release : <span id="release"></span></h5>
+                    <h5 class="sameColor">Storage : <span id="storage"></span></h5>
+                    <h5 class="sameColor">Processor : <span id="processor"></span></h5>
+                    <h5 class="sameColor">Bluetooth : <span id="bluetooth"></span></h5>
+                    <h5 class="sameColor">Other's : <span id="others"></span></h5>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
